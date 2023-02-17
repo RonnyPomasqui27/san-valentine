@@ -1,0 +1,271 @@
+:root {
+  --background-color: #ffd1cc;
+  --color-rose: #ff5d99;
+  --background-color-boton: linear-gradient(to right, #f4e0f4, #f7c6f7, #f9abf9, #fa8dfb, #fb6bfb);
+  --color-paragraph: #bdbdbd;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://img.freepik.com/vector-gratis/coleccion-ilustraciones-pareja-san-valentin_23-2148809667.jpg?w=996&t=st=1676418714~exp=1676419314~hmac=7faf81449e242a56aab61057d9b9efe193865253bcdae3f00564f333723a7400');
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -3;
+}
+
+header {
+  width: 100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+  /* conserva el tamaño de la imagen */
+  object-fit: contain;
+  animation: latir 1s infinite ease-in-out alternate;
+}
+
+.nav_container {
+  width: 50%;
+  padding: 5px 10px;
+}
+
+.list_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.list_item {
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  gap: 70px;
+}
+
+.main_title {
+  width: 45%;
+  padding: 35px 20px;
+  margin-top: 25%;
+  margin-left: 2%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.main_title h1 {
+  font-size: 3.1rem;
+  color: var(--color-rose);
+}
+
+.main_title p {
+  font-size: 0.9rem;
+}
+
+.boton_Container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.8rem;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 70px;
+  background-image: linear-gradient(to right, #fbd1fb, #f7afeb, #f58bd6, #f361bd, #f0219f);
+}
+
+/* estilos de cartas */
+
+.img_container {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.card {
+  width: 180px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  transform: scale(1);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.card:hover {
+  transform: scale(1.1) translateY(-50px);
+}
+
+.card_description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card_description p {
+  font-size: 0.85rem;
+}
+
+.card_description img {
+  width: 140px;
+}
+
+/* responsive */
+/* primera medida  */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+
+  .main_title {
+    width: 90%;
+    margin-top: 10%;
+  }
+
+  .img_container {
+    width: 100%;
+  }
+
+  .menu_hamgurger {
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .hamburger_item {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  .nav_container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
+
+  .list_container {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: 1s;
+    background-image: linear-gradient(to right top, #e1caaa, #f4a98b, #ff8092, #f45fbe, #a563fb);
+    border-radius: 0px 0px 35px 35px;
+    z-index: 2;
+  }
+
+  .logo {
+    width: 75px;
+  }
+}
+
+.active {
+  transform: translateX(0%);
+}
+
+/* diseño para dispositivos moviles */
+@media (max-width: 375px) {
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main_title {
+    margin-top: -5%;
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  .boton_Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .img_container {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 30px;
+    overflow: scroll;
+    margin-top: 20%;
+    padding: 10px;
+  }
+
+}
+
+@keyframes latir {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+

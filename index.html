@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <title>San Valentine</title>
+</head>
+
+<body>
+  <header>
+    <!-- logo -->
+    <img
+      src="https://static.vecteezy.com/system/resources/previews/010/833/945/original/pink-heart-game-asset-2d-icon-transparent-background-png.png"
+      class="logo">
+    <!-- menu de hamburguesa -->
+    <div class="menu_hamgurger">
+      <div class="hamburger_item"></div>
+      <div class="hamburger_item"></div>
+      <div class="hamburger_item"></div>
+    </div>
+    <!-- contenedor de los link -->
+    <nav class="nav_container">
+      <!-- lista de los link -->
+      <ol class="list_container">
+        <!-- links -->
+        <li class="list_item">Home</li>
+        <li class="list_item">About</li>
+        <li class="list_item">Portfolio</li>
+        <li class="list_item">Contact</li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <section class="main_title">
+      <div>
+        <h1>In Love</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia repudiandae, numquam impedit deserunt consequatur nostrum quidem at, obcaecati explicabo saepe eos assumenda dignissimos possimus dicta quod officiis! Molestiae, corrupti ipsa.</p>  
+      </div>
+      <div class="boton_Container">
+        <button>NEXT</button>
+      </div>
+    </section>
+  
+    <section class="img_container">
+      <!-- primera carta -->
+      <div class="card">
+        <div class="card_description">
+          <img src="https://static.vecteezy.com/system/resources/previews/009/408/668/original/light-bulb-transparent-free-png.png" alt="">
+          <p>LOREM IPSUM</p>
+        </div>
+        <button>MORE</button>
+      </div>
+  <!-- segunda carta -->
+      <div class="card">
+        <div class="card_description">
+          <img src="https://cdn-icons-png.flaticon.com/512/1191/1191637.png">
+          <p>LOREM IPSUM</p>
+        </div>
+        <button>MORE</button>
+      </div>
+      <!-- tercera carta  -->
+      <div class="card">
+        <div class="card_description">
+          <img src="https://images.vexels.com/media/users/3/139540/isolated/preview/31725566c2137f5bbe7fbe776c70bfe6-juguete-de-avion.png" alt="">
+          <p>LOREM IPSUM</p>
+        </div>
+        <button>MORE</button>
+      </div>
+    </section>
+  </main>
+
+ 
+
+
+</body>
+
+
+<script>
+  // var ambito global => uso en todo el documento (ya es recomendable)  
+  // let puede ser de ambito global y en bloque 
+  // const es un valor que no cambia
+
+  let hamburguesa = document.querySelector('.menu_hamgurger')
+  let menu = document.querySelector('.list_container');
+
+  function menuH () {
+    menu.classList.toggle('active')
+  }
+  
+  hamburguesa.addEventListener('click',  menuH )
+
+</script>
+</html>
