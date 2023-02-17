@@ -228,7 +228,7 @@ button {
 }
 
 /* diseño para dispositivos moviles */
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   main {
     flex-direction: column-reverse;
     justify-content: center;
